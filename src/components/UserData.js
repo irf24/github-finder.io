@@ -1,22 +1,22 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 //user data component
 
-const UserData = ({ user: { login, avatar_url, html_url } }) => {
+const UserData = ({ user: { id, name, company } }) => {
   return (
-    <div className="card col-sm-3 m-4">
-      <div className="card-body">
-        <img
-          src={avatar_url}
-          className="rounded-circle"
-          style={{ width: "60px", height: "60px", marginBottom: "20px" }}
-        />
-        <p>{login}</p>
-        <a href={html_url} className="btn btn-success my-2">
-          View
-        </a>
-      </div>
-    </div>
+    <>
+      <tr>
+        <th>{id}</th>
+        <td>{name}</td>
+        <td>{company.name}</td>
+        <td>
+          <Link to={`/users/${id}/posts`} className="btn btn-success my-2">
+            View
+          </Link>
+        </td>
+      </tr>
+    </>
   );
 };
 

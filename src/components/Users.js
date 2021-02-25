@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import UserData from "./UserData";
 import Spinner from "./Spinner";
 
@@ -10,11 +10,11 @@ const Users = ({ loading, users }) => {
     return <Spinner />;
   } else {
     return (
-      <div className="row justify-content-center">
+      <>
         {users.map((user) => (
           <UserData key={user.id} user={user} />
         ))}
-      </div>
+      </>
     );
   }
 };

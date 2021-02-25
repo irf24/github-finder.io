@@ -3,9 +3,13 @@
 }
 
 .Navbar {
-  margin-top: 20px;
+  background-color: cornflowerblue;
+  color: white;
 }
 
+.link {
+  color: white;
+}
 .title {
   margin-left: 10px;
 }
